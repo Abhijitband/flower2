@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+}
+
+#garden-container {
+    display: flex;
+    gap: 20px;
+}
+
+.tulip {
+    width: 100px;
+    height: 200px;
+    overflow: visible;
+}
+
+.stem, .leaf, .petal {
+    opacity: 0;
+}
+
+.stem-leaf {
+    animation: grow 3s ease-out forwards;
+}
+
+.petals {
+    animation: bloom 2s ease-out 3s forwards;
+}
+
+@keyframes grow {
+    0% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes bloom {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
